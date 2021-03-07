@@ -38,11 +38,11 @@ class Hello2DFrame extends JFrame {
         g2d.drawLine(0,0, w,h);
         g2d.drawLine(0,h, w,0);
         
-        //Modificação 2: Adcionei uma Elipse.
+        //Modificação 2: Adicionei uma Elipse.
         g2d.drawOval(0, 0, 350, 350);
         //Fim
         
-        //Modificação 3(de minha escolha): Adcionei uma String.
+        //Modificação 3(de minha escolha): Adicionei uma String.
         g2d.setFont(new Font("Arial",Font.BOLD,100));
         g2d.drawString("A", 140, 210);
         // Fim
