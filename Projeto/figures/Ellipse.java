@@ -22,7 +22,7 @@ public class Ellipse extends Figure{
     }
 
     public void print(){
-        System.out.format("Elipse de tamanho (%d, %d) e na posicao(%d, %d).\n", this.w, this.h, this.x, this.y);
+        System.out.format("Elipse tamanho (%d, %d) // posicao(%d, %d).\n", this.w, this.h, this.x, this.y);
     }
     public void paint(Graphics g){
         Graphics2D g2d = (Graphics2D) g;
