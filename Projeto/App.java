@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import figures.*;
 
+
 class App {
     public static void main (String[] args) {
         ListFrame frame = new ListFrame();
@@ -13,10 +14,13 @@ class App {
 }
 
 class ListFrame extends JFrame {
+
+	// Criar lista
     ArrayList<Figure> figs = new ArrayList<Figure>();
     Random rand = new Random();
-    Color cores[] = {Color.blue, Color.gray, Color.green, Color.magenta, Color.cyan, Color.red, Color.yellow, Color.black};
+    Color cor[] = {Color.blue, Color.gray, Color.green, Color.magenta, Color.cyan, Color.red, Color.yellow, Color.black};
     ListFrame () {
+    	
         this.addWindowListener (
             new WindowAdapter() {
                 public void windowClosing (WindowEvent e) {
@@ -33,22 +37,38 @@ class ListFrame extends JFrame {
                     int w = rand.nextInt(100);
                     int h = rand.nextInt(100);
                     int line = rand.nextInt(7);
-                    int background = rand.nextInt(7);
+                    int background = rand.nextInt(8);
+                    
+                    	// Adiciona figuras
+                    
                     if (evt.getKeyChar() == 'r') {
-                        Rect r = new Rect(x,y, w,h, cores[line], cores[background]);
+                        Rect r = new Rect(x,y, w,h, cor[line], cor[background]);
                         figs.add(r);
                     } else if (evt.getKeyChar() == 'e') {
-                        figs.add(new Ellipse(x,y, w,h, cores[line], cores[background]));
+                        figs.add(new Ellipse(x,y, w,h, cor[line], cor[background]));
+                    } else if (evt.getKeyChar() == 't') {
+                    	figs.add(new Triangulo(x,y, w,h, cor[line], cor[background]));
+                    	// Hexagono Não está Funcionando
+                    }/* else if (evt.getKeyChar() == 'h') {
+                    	figs.add(new Hexagono(x,y, w,h, cor[line], cor[background]));
+                    }*/else if (evt.getKeyChar() == 'l') {
+                    	figs.add(new Line(x,y, w,h, cor[line], cor[background]));
+                    	
+                    	// Deleta do final da lista
+                    	
+                    } else if (evt.getKeyChar() == KeyEvent.VK_DELETE) {
+                    	figs.remove(figs.size() -1);
                     }
                     repaint();
+                    
                 }
             }
-        );
-        
+        );        
         		/**JANELA**/
-        
+        setDefaultCloseOperation(EXIT_ON_CLOSE);		
         this.setTitle("Figuras");
-        this.setSize(500, 500);
+        this.setSize(700, 700); /** Ajustar para o tamanho da tela**/
+        
     }
 
     public void paint (Graphics g) {
