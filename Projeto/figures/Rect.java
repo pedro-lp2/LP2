@@ -18,7 +18,7 @@ public class Rect extends Figure{
     }
 
     public void print(){
-        System.out.format("Rentangulo de tamanho (%d, %d) e na posicao (%d, %d).\n", this.w, this.h, this.x, this.y);
+        System.out.format("Retângulo tamanho (%d, %d) // posicao (%d, %d).\n", this.w, this.h, this.x, this.y);
     }
     
     public void paint(Graphics g){
