@@ -52,7 +52,7 @@ class ListFrame extends JFrame {
                     }/* else if (evt.getKeyChar() == 'h') {
                     	figs.add(new Hexagono(x,y, w,h, cor[line], cor[background]));
                     }*/else if (evt.getKeyChar() == 'l') {
-                    	figs.add(new Line(x,y, w,h, cor[line], cor[background]));
+                    	figs.add(new Linha(x,y, w,h, cor[line], cor[background]));
                     	
                     	// Deleta do final da lista
                     	
