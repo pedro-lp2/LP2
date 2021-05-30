@@ -42,7 +42,7 @@ class Frame extends JFrame{
     		o.close();
     		
     	} catch (Exception x) {
-    		System.out.println("ERROR 404 NOT FOUND XD !");
+    		System.out.println("ERRO!");
     	}
     	buts.add(new BRetangulo(1, new Retangulo(20, 50, 30, 30, Color.BLACK, Color.BLACK)));
     	buts.add(new BElipse(2, new Elipse(20,90,30,30, Color.BLACK, Color.BLACK)));
@@ -130,20 +130,18 @@ class Frame extends JFrame{
                         	Ffocus.setContour(Color.red);
                         	aux += 1;
                     	}
-                    } else if(evt.getKeyChar() == 'c'){
+                    } else if(evt.getKeyChar() == 'f'){
                     	Ffocus.setFill(colors[colorPaintAux]);
                     	colorPaintAux += 1;
                     	if(colorPaintAux >= 12) {
                     		colorPaintAux = 0;
                     	}
-                    } else if(evt.getKeyChar() == 'C'){
+                    } else if(evt.getKeyChar() == 'c'){
                     	Ffocus.setBorder(colors[colorPaintAux]);
                     	colorPaintAux += 1;
                     	if(colorPaintAux >= 12) {
                     		colorPaintAux = 0;
                     	}
-                    } else if(evt.getKeyChar() == 'b'){
-                    	Bfocus = null;
                     }
                     repaint();
                 }
