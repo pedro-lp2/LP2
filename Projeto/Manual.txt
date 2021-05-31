@@ -1,0 +1,28 @@
+  __  __     _     _  _   _   _     _     _    
+ |  \/  |   /_\   | \| | | | | |   /_\   | |   
+ | |\/| |  / _ \  | .` | | |_| |  / _ \  | |__ 
+ |_|  |_| /_/ \_\ |_|\_|  \___/  /_/ \_\ |____|
+                                               
+
+Criação e remoção:
+
+"r" Cria um retângulo.
+"e" Cria uma elipse.
+"t" Cria um triângulo.
+
+Propriedades ajustáveis:
+
+"Espaço" Troca o foco da figura.
+"Delete" Deleta a figura.
+"f" Muda a cor de fundo da figura em foco.
+"c" Muda o contorno da figura em foco.
+"+" Aumenta a figura em foco.
+"-" Diminui a figura em foco.
+
+
+Posição:
+
+"←" Move para a esquerda a figura em foco.
+"↑" Move para cima a figura em foco.
+"→" Move para a direta a figura em foco.
+"↓" Move para baixo a figura em foco.
