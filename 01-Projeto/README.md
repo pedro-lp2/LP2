@@ -1,6 +1,6 @@
 <h2> PROJETO 1/2 </h2>
  
-[![Gmail Badge](https://img.shields.io/badge/-pushpneetsingh99@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mailharshkhatri@gmail.com)](mailto:ph2012mu@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-ph2012mu@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mailharshkhatri@gmail.com)](mailto:ph2012mu@gmail.com)
 
 - Pelo menos 4 figuras diferentes ✔️
     1. Criação e remoção ✔️
