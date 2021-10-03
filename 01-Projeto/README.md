@@ -10,12 +10,13 @@
 
 
 ## ⚙️ Manual
+Criação e remoção:
 
-  e -> Cria uma elipse
-  r -> Cria um retângulo
-  t -> Cria um triângulo
-  l -> Cria uma linha 
-  Del -> Remove a ultima figura
+- e -> Cria uma elipse
+- r -> Cria um retângulo
+- t -> Cria um triângulo
+- l -> Cria uma linha 
+- Del -> Remove a ultima figura
   
   
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=pedro-lp2.pedro-lp2)
