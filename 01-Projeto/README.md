@@ -11,7 +11,6 @@
 
 ## ⚙️ Manual
 
-- Criação e remoção:
   e -> Cria uma elipse
   r -> Cria um retângulo
   t -> Cria um triângulo
