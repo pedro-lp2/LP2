@@ -48,7 +48,7 @@ class ListFrame extends JFrame {
                         Retangulo r = new Retangulo(x,y, w,h, cor[line], cor[background]);
                         figs.add(r);
                     } else if (evt.getKeyChar() == 'e') {
-                        figs.add(new Ellipse(x,y, w,h, cor[line], cor[background]));
+                        figs.add(new Elipse(x,y, w,h, cor[line], cor[background]));
                     } else if (evt.getKeyChar() == 't') {
                     	figs.add(new Triangulo(x,y, w,h, cor[line], cor[background]));
                     }else if (evt.getKeyChar() == 'l') {
