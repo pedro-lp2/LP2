@@ -18,9 +18,7 @@
   l -> Cria uma linha 
   Del -> Remove a ultima figura
   
-- 
-
-
+  
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=pedro-lp2.pedro-lp2)
 
 -----
