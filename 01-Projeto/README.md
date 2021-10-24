@@ -4,8 +4,8 @@
 
 - Pelo menos 4 figuras diferentes ✔️
     1. Criação e remoção ✔️
-    2. Propriedades ajustáveis ❌
-    3. Posição, tamanho e z-order ❌
+    2. Propriedades ajustáveis ✔️
+    3. Posição, tamanho e z-order ✔️
     4. Cor de contorno e cor de fundo ✔️
 
 
@@ -15,10 +15,18 @@ Criação e remoção:
 - e → Cria uma elipse
 - r → Cria um retângulo
 - t → Cria um triângulo
-- l → Cria uma linha 
-- Del → Remove a ultima figura
-  
-  
+- p → Cria um pentagono
+
+Propriedades ajustáveis:
+
+- f → Altera a cor de fundo da figura em foco
+- c → Altera a cor de contorno da figura em foco
+- '+' → Aumenta o tamanho da figura em foco
+- '-' → Diminui o tamanho da figura em foco
+- 'setas direcionais do teclado' → Arrastam a figura em foco para o seu respectivo lado
+- 'Space' → Muda o foco para a próxima figura
+- Del → Remove a figura em foco
+
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=pedro-lp2.pedro-lp2)
 
 -----
