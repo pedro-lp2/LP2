@@ -1,35 +1,29 @@
 package figures;
-
+import java.awt.Graphics;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
 public class Elipse extends Figure{
-    int x, y;
-    int w, h;
-    Color line, background;
-    Ellipse2D poly;
-
+    private static final long serialVersionUID = 1L;
+   
     public Elipse (int x, int y, int w, int h, Color line, Color background){
         super(x, y, w, h, line, background);
-        this.x = x; 
-        this.y = y;
-        this.w = w;
-        this.h = h;
-        this.line = line;
-        this.background = background;
-        
-        this.poly = new Ellipse2D.Double(this.x, this.y, this.w, this.h);
-    }
-    public void paint(Graphics g){
+    }	
+    public void paint(Graphics g, boolean focused){
+    	Color Cfocus;
+    	if(focused == true) {
+    		Cfocus = Color.red;
+    	}
+    	else {
+    		Cfocus = new Color(0,0,0,0);
+    	}
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setColor(this.line);
-        g2d.draw(this.poly);
-        g2d.setColor(this.background);
-        g2d.fill(this.poly);
+        g.setColor(this.getBorder());
+        g2d.draw(new Ellipse2D.Double(this.getX(),this.getY(),this.getW(),this.getH()));
+        g.setColor(this.getFill());
+        g2d.fill(new Ellipse2D.Double(this.getX(),this.getY(),this.getW(),this.getH()));
+        g.setColor(Cfocus);
+        g2d.draw(new Ellipse2D.Double(this.getX()-1, this.getY()-1, this.getW()+2, this.getH()+2));
     }
-	@Override
-	public void print() {
-		// TODO Auto-generated method stub
-		
-	}
+    
 }
