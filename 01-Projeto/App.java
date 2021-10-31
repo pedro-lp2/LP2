@@ -6,6 +6,7 @@ import java.util.Random;
 import figures.*;
 import ivisible.IVisible;
 
+
 import java.io.*;
 
 
@@ -14,6 +15,8 @@ class App {
     public static void main(String[] args){
         Frame frame = new Frame();
         frame.setVisible(true);
+        frame.setResizable(false);
+        
     }
 }
 
@@ -35,6 +38,17 @@ class Frame extends JFrame{
     
 
 	Frame() {
+		try {
+    		FileInputStream f = new FileInputStream("proj.bin");
+    		ObjectInputStream o = new ObjectInputStream(f);
+    		ArrayList<Figure> readObject = (ArrayList<Figure>) o.readObject();
+			this.figs = readObject;
+    		o.close();
+    		
+    	} catch (Exception x) {
+    		JOptionPane.showMessageDialog(null, "Erro 101",
+    			      "Erro!", JOptionPane.ERROR_MESSAGE);
+    	}
         this.addWindowListener(
             new WindowAdapter(){
                 public void windowClosing(WindowEvent e){
@@ -165,13 +179,17 @@ class Frame extends JFrame{
                 }
             );
         		/**JANELA**/
-        //setDefaultCloseOperation(EXIT_ON_CLOSE);	
+        setDefaultCloseOperation(EXIT_ON_CLOSE);	
         this.setTitle("Figuras");
         this.setSize(700,700);/** Ajustar para o tamanho da tela**/
+
     }
 
     public void paint(Graphics g){
         super.paint(g);
+        Graphics2D g2d = (Graphics2D) g.create();
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2d.dispose();
         for(Figure fig: this.figs){
         	if(fig == Ffocus) {
         		fig.paint(g, true);
