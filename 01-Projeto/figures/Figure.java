@@ -1,5 +1,5 @@
 package figures;
-
+import java.awt.*;
 import ivisible.IVisible;
 
 import java.awt.Color;
@@ -8,13 +8,13 @@ import java.io.Serializable;
 
 public  abstract class Figure implements IVisible, Serializable{
 	private static final long serialVersionUID = 1L;
-	public int x;
-	public int y;
-	public int w;
-	public int h;
-	public Color border;
-	public Color fill;
-	public Color contour;
+	private int x;
+	private int y;
+	private int w;
+	private int h;
+	private Color border;
+	private Color fill;
+	private Color contour;
 	
 	public Figure(int x, int y, int w, int h, Color border, Color fill) {
 		this.setX(x);
