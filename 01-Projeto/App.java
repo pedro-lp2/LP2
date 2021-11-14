@@ -3,6 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import buttons.BDeletar;
+import buttons.BDeletarTudo;
 import buttons.BElipse;
 import buttons.BMudaCor;
 import buttons.BPentagono;
@@ -62,8 +63,9 @@ class Frame extends JFrame{
     	buts.add(new BElipse(2, new Elipse(20,90,30,30, Color.BLACK, Color.BLACK)));
     	buts.add(new BTriangulo(3, new Triangulo(20,130,30,30, Color.BLACK, Color.BLACK))); 
     	buts.add(new BPentagono(5, new Pentagono(20,170,30,30, Color.BLACK, Color.BLACK)));
-    	buts.add(new BDeletar(7, new Retangulo(20, 240, 70, 20, Color.BLACK, Color.BLACK))); // Deleta figura em foco
-    	buts.add(new BMudaCor(9, new Elipse(20, 270, 70, 20, Color.BLACK, Color.BLACK))); // Mudar a Cor da figura
+    	buts.add(new BDeletar(7, new Retangulo(20, 270, 70, 20, Color.BLACK, Color.BLACK))); // Deleta figura em foco
+    	buts.add(new BDeletarTudo(8, new Retangulo(20, 300, 70, 20, Color.BLACK, Color.BLACK))); // Deleta Todas as figuras da tela
+    	buts.add(new BMudaCor(9, new Elipse(20, 240, 70, 20, Color.BLACK, Color.BLACK))); // Mudar a Cor da figura
         this.addWindowListener(
             new WindowAdapter(){
                 public void windowClosing(WindowEvent e){
@@ -209,26 +211,20 @@ class Frame extends JFrame{
     							figs.add(new Retangulo(evt.getX(),evt.getY(), 30,30, Color.white,Color.black));  
     							bfocus = null;
     						}
-    						if (bfocus != null) {
-	    						if(bfocus.getIdx() == 2) {
+    						if (bfocus != null && !(bfocus.getIdx() == 2)) {
 	    							figs.add(new Elipse(evt.getX(),evt.getY(), 30,30, Color.white,Color.black));
 	    							bfocus = null;
-	    						}
-	    						if (bfocus != null) {
-		    						if(bfocus.getIdx() == 3) {
+	    					}
+	    						if (bfocus != null && !(bfocus.getIdx() == 3)) {
 		    							figs.add(new Triangulo(evt.getX(),evt.getY(), 30,30, Color.white,Color.black));
 		    							bfocus = null;
-		    						}
-		    						if (bfocus != null) {
-			    						if(bfocus.getIdx() == 5) {
+		    					}
+		    						if (bfocus != null&& !(bfocus.getIdx() == 5)) {
 			    							figs.add(new Pentagono(evt.getX(),evt.getY(), 30,30, Color.white,Color.black));
 			    							bfocus = null;
-			    						}
-		    						}
-	    						}
-    						}
-            			}
-            			
+			    					}
+		    				}
+	
             			for(Figure fig: figs) {
             				if(fig.clicked(evt.getX(),evt.getY())) {
     	        				ffocus = fig;
