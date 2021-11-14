@@ -9,8 +9,7 @@
     4. Cor de contorno e cor de fundo ✔️
     
 - Menu de botões (toolbox)
-    1.Criar figuras (alternativa ao teclado)
-    
+    1. Criar figuras (alternativa ao teclado)    
 - Gravação em arquivo
     1. Arquivo único (proj.bin)
     2. Gravar ao sair, carregar ao entrar
