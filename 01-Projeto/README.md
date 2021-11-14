@@ -7,11 +7,14 @@
     2. Propriedades ajustáveis ✔️
     3. Posição, tamanho e z-order ✔️
     4. Cor de contorno e cor de fundo ✔️
+    
 - Menu de botões (toolbox)
-    5. Criar figuras (alternativa ao teclado) ✔️
+    1.Criar figuras (alternativa ao teclado)
+    
 - Gravação em arquivo
-    6. Arquivo único (proj.bin) ✔️
-    7. Gravar ao sair, carregar ao entrar ✔️
+    1. Arquivo único (proj.bin)
+    2. Gravar ao sair, carregar ao entrar
+   
 
 
 ## ⚙️ Manual
