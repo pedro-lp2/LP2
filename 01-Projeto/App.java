@@ -59,7 +59,7 @@ class Frame extends JFrame{
     		JOptionPane.showMessageDialog(null, "Erro 101",
     			      "Erro!", JOptionPane.ERROR_MESSAGE);
     	}
-		buts.add(new BRetangulo(1, new Retangulo(20, 50, 30, 30, Color.BLACK, Color.BLACK)));
+	buts.add(new BRetangulo(1, new Retangulo(20, 50, 30, 30, Color.BLACK, Color.BLACK)));
     	buts.add(new BTriangulo(3, new Triangulo(20,130,30,30, Color.BLACK, Color.BLACK)));
     	buts.add(new BElipse(2, new Elipse(20,90,30,30, Color.BLACK, Color.BLACK)));
     	buts.add(new BPentagono(5, new Pentagono(20,170,30,30, Color.BLACK, Color.BLACK)));
