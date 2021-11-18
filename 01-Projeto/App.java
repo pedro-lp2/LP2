@@ -209,15 +209,19 @@ class Frame extends JFrame{
             			if(bfocus != null && !(bfocus.clicked(evt.getX(),evt.getY()))) {
     						if(bfocus.getIdx() == 1) {
     							figs.add(new Retangulo(evt.getX(),evt.getY(), 30,30, Color.WHITE,Color.BLACK));
+    							bfocus = null;
     						}
     						if(bfocus != null &&(bfocus.getIdx() == 2)) {
     							figs.add(new Elipse(evt.getX(),evt.getY(), 30,30, Color.WHITE,Color.BLACK));
+    							bfocus = null;
     						}   			
     						if(bfocus != null &&(bfocus.getIdx() == 3)) {
     							figs.add(new Triangulo(evt.getX(),evt.getY(), 30,30, Color.WHITE,Color.BLACK));
+    							bfocus = null;
     						}
     						if(bfocus != null &&(bfocus.getIdx() == 5)) {
     							figs.add(new Pentagono(evt.getX(),evt.getY(), 30,30, Color.WHITE,Color.BLACK));
+    							bfocus = null;
     						}    						
             			}
 	
