@@ -38,4 +38,4 @@ Propriedades ajustáveis:
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=pedro-lp2.pedro-lp2)
 
 -----
-Credits: [Pedro-lp2](https://github.com/pedro-lp2)
+Credits: [Pedro-lp2](https://github.com/pedro-lp2) 
