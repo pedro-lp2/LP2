@@ -59,9 +59,9 @@ class Frame extends JFrame{
     		JOptionPane.showMessageDialog(null, "Erro 101",
     			      "Erro!", JOptionPane.ERROR_MESSAGE);
     	}
-	buts.add(new BRetangulo(1, new Retangulo(20, 50, 30, 30, Color.BLACK, Color.BLACK)));
+		buts.add(new BRetangulo(1, new Retangulo(20, 50, 30, 30, Color.BLACK, Color.BLACK)));
+    	buts.add(new BTriangulo(3, new Triangulo(20,130,30,30, Color.BLACK, Color.BLACK)));
     	buts.add(new BElipse(2, new Elipse(20,90,30,30, Color.BLACK, Color.BLACK)));
-    	buts.add(new BTriangulo(3, new Triangulo(20,130,30,30, Color.BLACK, Color.BLACK))); 
     	buts.add(new BPentagono(5, new Pentagono(20,170,30,30, Color.BLACK, Color.BLACK)));
     	buts.add(new BDeletar(7, new Retangulo(20, 270, 70, 20, Color.BLACK, Color.BLACK))); // Deleta figura em foco
     	buts.add(new BDeletarTudo(8, new Retangulo(20, 300, 70, 20, Color.BLACK, Color.BLACK))); // Deleta Todas as figuras da tela
@@ -196,7 +196,7 @@ class Frame extends JFrame{
     							if(but.getIdx() == 9 && ffocus != null) {
     								ffocus.setFill(colors[colorPaintAux]);
     		                    	colorPaintAux += 1;
-    		                    	if(colorPaintAux >= 12) {
+    		                    	if(colorPaintAux >= 6) {
     		                    		colorPaintAux = 0;
     		                    	}
     		                    	bfocus = null;
@@ -208,22 +208,18 @@ class Frame extends JFrame{
             			}
             			if(bfocus != null && !(bfocus.clicked(evt.getX(),evt.getY()))) {
     						if(bfocus.getIdx() == 1) {
-    							figs.add(new Retangulo(evt.getX(),evt.getY(), 30,30, Color.white,Color.black));  
-    							bfocus = null;
+    							figs.add(new Retangulo(evt.getX(),evt.getY(), 30,30, Color.WHITE,Color.BLACK));
     						}
-    						if (bfocus != null && !(bfocus.getIdx() == 2)) {
-	    							figs.add(new Elipse(evt.getX(),evt.getY(), 30,30, Color.white,Color.black));
-	    							bfocus = null;
-	    					}
-	    						if (bfocus != null && !(bfocus.getIdx() == 3)) {
-		    							figs.add(new Triangulo(evt.getX(),evt.getY(), 30,30, Color.white,Color.black));
-		    							bfocus = null;
-		    					}
-		    						if (bfocus != null&& !(bfocus.getIdx() == 5)) {
-			    							figs.add(new Pentagono(evt.getX(),evt.getY(), 30,30, Color.white,Color.black));
-			    							bfocus = null;
-			    					}
-		    				}
+    						if(bfocus != null &&(bfocus.getIdx() == 2)) {
+    							figs.add(new Elipse(evt.getX(),evt.getY(), 30,30, Color.WHITE,Color.BLACK));
+    						}   			
+    						if(bfocus != null &&(bfocus.getIdx() == 3)) {
+    							figs.add(new Triangulo(evt.getX(),evt.getY(), 30,30, Color.WHITE,Color.BLACK));
+    						}
+    						if(bfocus != null &&(bfocus.getIdx() == 5)) {
+    							figs.add(new Pentagono(evt.getX(),evt.getY(), 30,30, Color.WHITE,Color.BLACK));
+    						}    						
+            			}
 	
             			for(Figure fig: figs) {
             				if(fig.clicked(evt.getX(),evt.getY())) {
